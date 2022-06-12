@@ -56,50 +56,50 @@ class TorrentIndexer {
         case "series":
           results = await Promise.all([
             this.RARBG.search(query, type, page, "tv"),
-            this.SKY.search(query, type, page, "show"),
+            //this.SKY.search(query, type, page, "show"),
             this.TPB.search(query, type, page),
             this.TORRENTPROJECT.search(query, type, page),
             this.LEETX.search(query, type, page, "TV"),
-            this.KICKASS.search(query, type, page),
+            //this.KICKASS.search(query, type, page),
             this.EZTV.search(query, type, page),
             this.LIMETORRENTS.search(query, type, page, "tv"),
-            this.ZOOQLE.search(query, type, page, "TV")
+            //this.ZOOQLE.search(query, type, page, "TV")
           ]);
           break;
         case "anime":
           results = await Promise.all([
-            this.SKY.search(query, type, page),
+            //this.SKY.search(query, type, page),
             this.TPB.search(query, type, page),
             this.TORRENTPROJECT.search(query, type, page),
             this.LEETX.search(query, type, page, "Anime"),
-            this.KICKASS.search(query, type, page),
+            //this.KICKASS.search(query, type, page),
             this.LIMETORRENTS.search(query, type, page, "anime"),
-            this.ZOOQLE.search(query, type, page, "Anime")
+            //this.ZOOQLE.search(query, type, page, "Anime")
           ]);
           break;
         case "music":
           results = await Promise.all([
             this.RARBG.search(query, type, page, "2;23;24;25;26"),
-            this.SKY.search(query, type, page),
+            //this.SKY.search(query, type, page),
             this.TPB.search(query, type, page),
             this.TORRENTPROJECT.search(query, type, page),
             this.LEETX.search(query, type, page, "Music"),
-            this.KICKASS.search(query, type, page),
+            //this.KICKASS.search(query, type, page),
             this.LIMETORRENTS.search(query, type, page, "music")
           ]);
           break;
         default:
           results = await Promise.all([
             this.RARBG.search(query, type, page),
-            this.SKY.search(query, type, page),
+            //this.SKY.search(query, type, page),
             this.TPB.search(query, type, page),
             this.TORRENTPROJECT.search(query, type, page),
             this.YTS.search(query, type, page),
             this.LEETX.search(query, type, page),
-            this.KICKASS.search(query, type, page),
+            //this.KICKASS.search(query, type, page),
             this.EZTV.search(query, type, page),
             this.LIMETORRENTS.search(query, type, page),
-            this.ZOOQLE.search(query, type, page)
+            //this.ZOOQLE.search(query, type, page)
           ]);
       }
       /* eslint-enable */
