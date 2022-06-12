@@ -42,14 +42,14 @@ class TorrentIndexer {
         case "movies":
           results = await Promise.all([
             this.RARBG.search(query, type, page, "movies"),
-            this.SKY.search(query, type, page, "movie"),
+            //this.SKY.search(query, type, page, "movie"),
             this.TPB.search(query, type, page),
             this.TORRENTPROJECT.search(query, type, page),
             this.LEETX.search(query, type, page, "Movies"),
-            this.KICKASS.search(query, type, page),
+            //this.KICKASS.search(query, type, page),
             this.YTS.search(query, type, page),
             this.LIMETORRENTS.search(query, type, page, "movies"),
-            this.ZOOQLE.search(query, type, page, "Movies")
+            //this.ZOOQLE.search(query, type, page, "Movies")
           ]);
           break;
         case "tv":
